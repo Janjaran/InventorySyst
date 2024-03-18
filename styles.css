@@ -1,0 +1,102 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('bg.jpg');
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(207, 165, 75, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: glow 4s infinite alternate ease-in-out;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+        opacity: 0.8;
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(211, 137, 26, 0.9), 0 0 30px rgba(228, 206, 81, 0.7), 0 0 40px rgba(226, 177, 16, 0.5);
+        opacity: 1;
+    }
+}
+
+.show-container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"],
+.checkbox {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+
+.checkbox {
+    width: auto; 
+    margin-bottom: 0;
+}
+
+.checkbox {
+    width: 30px; 
+    height: 30px; 
+    margin-bottom: 0;
+}
+
+.tablesSection {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+}
